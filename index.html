@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form name="myform" onsubmit="return validation()">
+    <label>studentsname</label>
+    <input type="text" name="studentsname" value=""><br><br>
+    <label>rollno</label>
+    <input type="text" name="rollno" value=""><br><br>
+    <input type="submit" value="login">
+    <script>
+        function validation()
+        {
+        var x=document.forms.myform.studentsname.value;
+        var y=document.forms.myform.rollno.value;
+        if(x=="")
+        {
+            alert("enter the studentsname")
+            return false;
+        }
+        
+        
+        if(isNaN(y))
+        {
+            alert("enter the number")
+            return false;
+        }
+        return true;
+    }
+    </script>
+  </form>  
+</body>
+</html>
